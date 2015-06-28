@@ -24,7 +24,7 @@ func main() {
     //First queury the database and store the latest message id to initialize the data
     //Get messages from the room and recod the last id as the new first id to query 
     //run this check every .5 seconds
-    con := irc.IRC("drd_1812", "drd_1812")
+    con := irc.IRC("", "")
     err1 := con.Connect("irc.freenode.net:6667")
     if err1 != nil {
         fmt.Println("Failed connecting")
@@ -32,8 +32,8 @@ func main() {
     }
     
     
-	c := hipchat.Client{AuthToken: "3e3ca2b2bcee915cd46c3cd133727f"}	
-	if repls, err := c.RoomHistory("Stoopkids", "recent", "UTC" ); err != nil {
+	c := hipchat.Client{AuthToken: ""}	
+	if repls, err := c.RoomHistory("", "recent", "UTC" ); err != nil {
 		log.Printf("Expected no error, but got %q", err)
 	
 	var dat map[string]interface{}
