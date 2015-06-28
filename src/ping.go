@@ -11,12 +11,12 @@ import (
 func main() {
 
 	var (
-		mssrv = flag.String("mssrv", "NCC1701D\\KEPLER", "NCC1701D\\KEPLER")
-		msdb  = flag.String("msdb", "JoeBotDB", "JoeBotDB")
-		//	dsn		= flag.String("dsn", "", "NCC1701D")
-		msuser   = flag.String("msuser", "", "ircloggerbot")
-		mspass   = flag.String("mspass", "", "Socrates314!")
-		msdriver = flag.String("msdriver", defaultDriver(), "NCC1701D")
+		mssrv = flag.String("mssrv", "", "")
+		msdb  = flag.String("msdb", "", "")
+		//	dsn		= flag.String("dsn", "", "")
+		msuser   = flag.String("msuser", "", "")
+		mspass   = flag.String("mspass", "", "")
+		msdriver = flag.String("msdriver", defaultDriver(), "")
 	//	msport   = flag.String("msport", "1433", "1433")
 	)
 
