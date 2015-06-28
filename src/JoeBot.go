@@ -22,8 +22,8 @@ func main() {
 		mssrv = flag.String("mssrv", "NCC1701D\\KEPLER", "NCC1701D\\KEPLER")
 		msdb  = flag.String("msdb", "JoeBotDB", "JoeBotDB")
 		//	dsn		= flag.String("dsn", "", "NCC1701D")
-		msuser   = flag.String("msuser", "", "Nikko")
-		mspass   = flag.String("mspass", "", "Socrates314!")
+		msuser   = flag.String("msuser", "", "")
+		mspass   = flag.String("mspass", "", "")
 		msdriver = flag.String("msdriver", defaultDriver(), "NCC1701D")
 	//	msport   = flag.String("msport", "1433", "1433")
 	)
@@ -125,10 +125,10 @@ func defaultDriver() string {
 }
 
 func HepCat(msg string)(hep string, err error){
-	c := hipchat.Client{AuthToken: "3e3ca2b2bcee915cd46c3cd133727f"}
+	c := hipchat.Client{AuthToken: ""}
 	req := hipchat.MessageRequest{
-		RoomId:        "Stoopkids",
-		From:          "drd.1812",
+		RoomId:        "",
+		From:          "",
 		Message:       msg,
 		Color:         hipchat.ColorPurple,
 		MessageFormat: hipchat.FormatText,
