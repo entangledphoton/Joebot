@@ -13,7 +13,7 @@ import (
 )
 
 func main() {
-	c := hipchat.NewHttpClient{AuthToken: "3e3ca2b2bcee915cd46c3cd133727f"}
+	c := hipchat.NewHttpClient{AuthToken: ""}
 	uri := "api.hipchat.com/v2/room/stoopkids/webhook"
 
 	payload := url.Values{"url": {"http://synchrotronics.net"}, "event": {"room_message"}, "name": {"drd"}}
@@ -22,7 +22,7 @@ func main() {
 	if neg != nil {
 		fmt.Println("Error : ", neg)
 	}
-	req.Header.Set("Authorization", "Bearer 3e3ca2b2bcee915cd46c3cd133727f")
+	req.Header.Set("Authorization", "Bearer ")
 	//req.Header.Set("Content-Type", "application/json")
 	resp, neg := client.Do(req)
 	defer resp.Body.Close()
