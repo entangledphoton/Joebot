@@ -69,7 +69,7 @@ func main() {
         con.Privmsg(roomName, "ALL HAIL THE GLOW CLOUD.")
     })
         con.AddCallback("JOIN", func (e *irc.Event) {
-        con.Privmsg("nickserv", "identify entangledphoton P3G4sU51!")
+        con.Privmsg("nickserv", "identify entangledphoton PASSWORD")
     })
     con.AddCallback("PRIVMSG", func (e *irc.Event) {
 //        con.Privmsg(roomName, e.Nick + ": " + e.Message())
